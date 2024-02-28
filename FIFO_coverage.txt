@@ -1,0 +1,584 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /\FIFO_TOP#dut 
+=== Design Unit: work.FIFO
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      19        19         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\FIFO_TOP#dut /P1   FIFO.sv(18)                        0          1
+/\FIFO_TOP#dut /P2   FIFO.sv(19)                        0          1
+/\FIFO_TOP#dut /P3   FIFO.sv(20)                        0          1
+/\FIFO_TOP#dut /P4   FIFO.sv(21)                        0          1
+/\FIFO_TOP#dut /P5   FIFO.sv(22)                        0          1
+/\FIFO_TOP#dut /P6   FIFO.sv(23)                        0          1
+/\FIFO_TOP#dut /P7   FIFO.sv(24)                        0          1
+/\FIFO_TOP#dut /P8   FIFO.sv(30)                        0          1
+/\FIFO_TOP#dut /P9   FIFO.sv(32)                        0          1
+/\FIFO_TOP#dut /P10  FIFO.sv(34)                        0          1
+/\FIFO_TOP#dut /P11  FIFO.sv(36)                        0          1
+/\FIFO_TOP#dut /P12  FIFO.sv(75)                        0          1
+/\FIFO_TOP#dut /P13  FIFO.sv(76)                        0          1
+/\FIFO_TOP#dut /P14  FIFO.sv(77)                        0          1
+/\FIFO_TOP#dut /P15  FIFO.sv(78)                        0          1
+/\FIFO_TOP#dut /P16  FIFO.sv(79)                        0          1
+/\FIFO_TOP#dut /P17  FIFO.sv(80)                        0          1
+/\FIFO_TOP#dut /P18  FIFO.sv(81)                        0          1
+/\FIFO_TOP#dut /P19  FIFO.sv(82)                        0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        41        41         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\FIFO_TOP#dut 
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO.sv
+------------------------------------IF Branch------------------------------------
+    17                                      8179     Count coming in to IF
+    17              1                        542     			if(!filo.rst_n) begin
+    27              1                       7637     			else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    29                                      7637     Count coming in to IF
+    29              1                       1350     				if(filo.count == FIFO_DEPTH)
+                                            6287     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    31                                      7637     Count coming in to IF
+    31              1                       2202     				if(filo.count == 0)
+                                            5435     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    33                                      7637     Count coming in to IF
+    33              1                        981     				if(filo.count == (FIFO_DEPTH-1))
+                                            6656     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    35                                      7637     Count coming in to IF
+    35              1                       1730     				if(filo.count == 1)
+                                            5907     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    101                                    10293     Count coming in to IF
+    101             1                        591     	if (!filo.rst_n) begin
+    106             1                       3592     	else if (filo.wr_en && filo.count !== FIFO_DEPTH  ) begin
+    112             1                       6110     	else begin 
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    114                                     6110     Count coming in to IF
+    114             1                       1282     		if (filo.full && filo.wr_en)
+    116             1                       4828     		else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    122                                    10293     Count coming in to IF
+    122             1                        591     	if (!filo.rst_n) begin
+    126             1                       2686     	else if (filo.rd_en && filo.count !== 0 ) begin
+    132             1                       7016     	else begin  
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    133                                     7016     Count coming in to IF
+    133             1                       2108     		if (filo.empty && filo.rd_en)
+    135             1                       4908     		else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    141                                    10293     Count coming in to IF
+    141             1                        591     	if (!filo.rst_n) begin
+    144             1                       9702     	else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    145                                     9702     Count coming in to CASE
+    147             1                       2790     			2'b01 : if(!filo.empty)
+    149             1                       2870     			2'b10 : if(!filo.full)
+    151             1                       2004     			2'b11: if(filo.full)
+                                            2038     All False Count
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    147                                     2790     Count coming in to IF
+    147             2                       1336     			2'b01 : if(!filo.empty)
+                                            1454     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    149                                     2870     Count coming in to IF
+    149             2                       1953     			2'b10 : if(!filo.full)
+                                             917     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    151                                     2004     Count coming in to IF
+    151             2                        365     			2'b11: if(filo.full)
+    153             1                        654     					else if(filo.empty)
+                                             985     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    161                                     4507     Count coming in to IF
+    161             1                        572     assign filo.full = (filo.count == FIFO_DEPTH)? 1 : 0;
+    161             2                       3935     assign filo.full = (filo.count == FIFO_DEPTH)? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    162                                     4507     Count coming in to IF
+    162             1                       1032     assign filo.empty = (filo.count == 0)? 1 : 0;
+    162             2                       3475     assign filo.empty = (filo.count == 0)? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    163                                     4507     Count coming in to IF
+    163             1                        698     assign filo.almostfull = (filo.count == FIFO_DEPTH-1)? 1 : 0; 
+    163             2                       3809     assign filo.almostfull = (filo.count == FIFO_DEPTH-1)? 1 : 0; 
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    164                                     4507     Count coming in to IF
+    164             1                       1171     assign filo.almostempty = (filo.count == 1)? 1 : 0;
+    164             2                       3336     assign filo.almostempty = (filo.count == 1)? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      16        16         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /\FIFO_TOP#dut  --
+
+  File FIFO.sv
+----------------Focused Condition View-------------------
+Line       29 Item    1  (filo.count == 8)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (filo.count == 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (filo.count == 8)_0   -                             
+  Row   2:          1  (filo.count == 8)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       31 Item    1  (filo.count == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (filo.count == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (filo.count == 0)_0   -                             
+  Row   2:          1  (filo.count == 0)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       33 Item    1  (filo.count == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (filo.count == (8 - 1))         Y
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  (filo.count == (8 - 1))_0  -                             
+  Row   2:          1  (filo.count == (8 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       35 Item    1  (filo.count == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (filo.count == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (filo.count == 1)_0   -                             
+  Row   2:          1  (filo.count == 1)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       106 Item    1  (filo.wr_en && (filo.count !== 8))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+          Input Term   Covered  Reason for no coverage   Hint
+         -----------  --------  -----------------------  --------------
+          filo.wr_en         Y
+  (filo.count !== 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  filo.wr_en_0          -                             
+  Row   2:          1  filo.wr_en_1          (filo.count !== 8)            
+  Row   3:          1  (filo.count !== 8)_0  filo.wr_en                    
+  Row   4:          1  (filo.count !== 8)_1  filo.wr_en                    
+
+----------------Focused Condition View-------------------
+Line       114 Item    1  (filo.full && filo.wr_en)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+   filo.full         Y
+  filo.wr_en         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  filo.full_0           -                             
+  Row   2:          1  filo.full_1           filo.wr_en                    
+  Row   3:          1  filo.wr_en_0          filo.full                     
+  Row   4:          1  filo.wr_en_1          filo.full                     
+
+----------------Focused Condition View-------------------
+Line       126 Item    1  (filo.rd_en && (filo.count !== 0))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+          Input Term   Covered  Reason for no coverage   Hint
+         -----------  --------  -----------------------  --------------
+          filo.rd_en         Y
+  (filo.count !== 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  filo.rd_en_0          -                             
+  Row   2:          1  filo.rd_en_1          (filo.count !== 0)            
+  Row   3:          1  (filo.count !== 0)_0  filo.rd_en                    
+  Row   4:          1  (filo.count !== 0)_1  filo.rd_en                    
+
+----------------Focused Condition View-------------------
+Line       133 Item    1  (filo.empty && filo.rd_en)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  filo.empty         Y
+  filo.rd_en         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  filo.empty_0          -                             
+  Row   2:          1  filo.empty_1          filo.rd_en                    
+  Row   3:          1  filo.rd_en_0          filo.empty                    
+  Row   4:          1  filo.rd_en_1          filo.empty                    
+
+----------------Focused Condition View-------------------
+Line       161 Item    1  (filo.count == 8)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (filo.count == 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (filo.count == 8)_0   -                             
+  Row   2:          1  (filo.count == 8)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       162 Item    1  (filo.count == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (filo.count == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (filo.count == 0)_0   -                             
+  Row   2:          1  (filo.count == 0)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       163 Item    1  (filo.count == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (filo.count == (8 - 1))         Y
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  (filo.count == (8 - 1))_0  -                             
+  Row   2:          1  (filo.count == (8 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       164 Item    1  (filo.count == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (filo.count == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (filo.count == 1)_0   -                             
+  Row   2:          1  (filo.count == 1)_1   -                             
+
+
+
+Directive Coverage:
+    Directives                       8         8         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\FIFO_TOP#dut /C12                      FIFO   Verilog  SVA  FIFO.sv(84)     1247 Covered   
+/\FIFO_TOP#dut /C13                      FIFO   Verilog  SVA  FIFO.sv(85)     2031 Covered   
+/\FIFO_TOP#dut /C14                      FIFO   Verilog  SVA  FIFO.sv(86)     3483 Covered   
+/\FIFO_TOP#dut /C15                      FIFO   Verilog  SVA  FIFO.sv(87)     1260 Covered   
+/\FIFO_TOP#dut /C16                      FIFO   Verilog  SVA  FIFO.sv(88)     1260 Covered   
+/\FIFO_TOP#dut /C17                      FIFO   Verilog  SVA  FIFO.sv(89)      427 Covered   
+/\FIFO_TOP#dut /C18                      FIFO   Verilog  SVA  FIFO.sv(90)      427 Covered   
+/\FIFO_TOP#dut /C19                      FIFO   Verilog  SVA  FIFO.sv(91)     1769 Covered   
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      30        30         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\FIFO_TOP#dut  --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO.sv
+    12                                               module FIFO(FIFO_if.DUT filo);
+    13                                               
+    14                                               	`ifdef SIM
+    15              1                       8179     		always_comb begin
+    16                                               		//RESET FUNCTIONALITY CHECK		
+    17                                               			if(!filo.rst_n) begin
+    18                                               				P1: assert final(filo.full === 0);
+    19                                               				P2: assert final(filo.empty === 1);
+    20                                               				P3: assert final (filo.almostfull === 0);
+    21                                               				P4: assert final (filo.almostempty === 0);
+    22                                               				P5: assert final (filo.overflow === 0);
+    23                                               				P6: assert final (filo.underflow === 0);
+    24                                               				P7: assert final (filo.wr_ack ===0 );
+    25                                               			end
+    26                                               		//COMPINATIONAL FLAGS CHECK & Counter	
+    27                                               			else begin
+    28                                               		
+    29                                               				if(filo.count == FIFO_DEPTH)
+    30                                               					P8: assert final (filo.full===1);
+    31                                               				if(filo.count == 0)
+    32                                               					P9: assert final (filo.empty === 1);
+    33                                               				if(filo.count == (FIFO_DEPTH-1))
+    34                                               					P10: assert final (filo.almostfull === 1);
+    35                                               				if(filo.count == 1)
+    36                                               					P11: assert final (filo.almostempty === 1);
+    37                                               				
+    38                                               					
+    39                                               			end	
+    40                                               			
+    41                                               
+    42                                               		end	
+    43                                               		property over_flow;
+    44                                               			@(posedge filo.clk) disable iff(!filo.rst_n) (filo.wr_en && filo.full) |=> filo.overflow ;
+    45                                               		endproperty	
+    46                                               
+    47                                               		property under_flow;
+    48                                               			@(posedge filo.clk) disable iff(!filo.rst_n) (filo.rd_en && filo.empty) |=> filo.underflow ;
+    49                                               		endproperty	
+    50                                               
+    51                                               		property write_ack;
+    52                                               			@(posedge filo.clk) disable iff(!filo.rst_n) (filo.wr_en && !filo.full) |=> filo.wr_ack ;
+    53                                               		endproperty	
+    54                                               
+    55                                               		property write_op;
+    56                                               			@(posedge filo.clk) disable iff(!filo.rst_n || filo.full) (filo.wr_en && !filo.rd_en) |=> (mem[$past(wr_ptr)] === $past(filo.data_in)) ;
+    57                                               		endproperty
+    58                                               
+    59                                               		property write_pt_inc;
+    60                                               			@(posedge filo.clk) disable iff(!filo.rst_n || filo.full) (filo.wr_en && !filo.rd_en) |=> (wr_ptr === ($past(wr_ptr)+3'b001)) ;
+    61                                               		endproperty	
+    62                                               			
+    63                                               		property read_op ;	
+    64                                               			@(posedge filo.clk) disable iff(!filo.rst_n || filo.empty) (!filo.wr_en && filo.rd_en) |=> (filo.data_out) === mem[$past(rd_ptr)] ;
+    65                                               		endproperty
+    66                                               
+    67                                               		property read_pt_inc;	
+    68                                               			@(posedge filo.clk) disable iff(!filo.rst_n || filo.empty) (!filo.wr_en && filo.rd_en) |=> (rd_ptr === ($past(rd_ptr) + 3'b001)) ;
+    69                                               		endproperty	
+    70                                               
+    71                                               		property no_read_op ;
+    72                                               			@(posedge filo.clk) disable iff(!filo.rst_n || filo.empty || filo.full) (!filo.rd_en ) |=> $stable(filo.data_out);
+    73                                               		endproperty 
+    74                                               
+    75                                               		P12: assert property (over_flow) ;
+    76                                               		P13: assert property (under_flow);
+    77                                               		P14: assert property (write_ack);
+    78                                               		P15: assert property (write_op)	;
+    79                                               		P16: assert property (write_pt_inc);
+    80                                               		P17: assert property (read_op);
+    81                                               		P18: assert property (read_pt_inc);
+    82                                               		P19: assert property (no_read_op);
+    83                                               
+    84                                               		C12: cover property (over_flow) ;
+    85                                               		C13: cover property (under_flow) ;
+    86                                               		C14: cover property (write_ack) ;
+    87                                               		C15: cover property (write_op) ;
+    88                                               		C16: cover property (write_pt_inc) ;
+    89                                               		C17: cover property (read_op) ;
+    90                                               		C18: cover property (read_pt_inc) ;
+    91                                               		C19: cover property (no_read_op) ;
+    92                                               
+    93                                               	`endif 	
+    94                                               
+    95                                               reg [FIFO_WIDTH-1:0] mem [FIFO_DEPTH-1:0];
+    96                                               
+    97                                               reg [max_fifo_addr-1:0] wr_ptr, rd_ptr;
+    98                                               
+    99                                               
+    100             1                      10293     always @(posedge filo.clk or negedge filo.rst_n) begin
+    101                                              	if (!filo.rst_n) begin
+    102             1                        591     		wr_ptr <= 0;
+    103             1                        591     		filo.wr_ack <=0;
+    104             1                        591     		filo.overflow <=0;
+    105                                              	end
+    106                                              	else if (filo.wr_en && filo.count !== FIFO_DEPTH  ) begin
+    107             1                       3592     		filo.overflow <= 0;
+    108             1                       3592     		mem[wr_ptr] <= filo.data_in;
+    109             1                       3592     		filo.wr_ack <= 1;
+    110             1                       3592     		wr_ptr <= wr_ptr + 1;
+    111                                              	end
+    112                                              	else begin 
+    113             1                       6110     		filo.wr_ack <= 0; 
+    114                                              		if (filo.full && filo.wr_en)
+    115             1                       1282     			filo.overflow <= 1;
+    116                                              		else
+    117             1                       4828     			filo.overflow <= 0;
+    118                                              	end
+    119                                              end
+    120                                              
+    121             1                      10293     always @(posedge filo.clk or negedge filo.rst_n) begin
+    122                                              	if (!filo.rst_n) begin
+    123             1                        591     		rd_ptr <= 0;
+    124             1                        591     		filo.underflow <= 0;
+    125                                              	end
+    126                                              	else if (filo.rd_en && filo.count !== 0 ) begin
+    127                                              
+    128             1                       2686     		filo.underflow <= 0;
+    129             1                       2686     		filo.data_out <= mem[rd_ptr];
+    130             1                       2686     		rd_ptr <= rd_ptr + 1;
+    131                                              	end
+    132                                              	else begin  
+    133                                              		if (filo.empty && filo.rd_en)
+    134             1                       2108     			filo.underflow <= 1;
+    135                                              		else
+    136             1                       4908     			filo.underflow <= 0;
+    137                                              	end
+    138                                              end
+    139                                              
+    140             1                      10293     always @(posedge filo.clk or negedge filo.rst_n) begin
+    141                                              	if (!filo.rst_n) begin
+    142             1                        591     		filo.count <= 0;
+    143                                              	end
+    144                                              	else begin
+    145                                              		case({filo.wr_en ,filo.rd_en})
+    146                                              
+    147                                              			2'b01 : if(!filo.empty)
+    148             1                       1336     						filo.count <=filo.count -1 ;
+    149                                              			2'b10 : if(!filo.full)
+    150             1                       1953     						filo.count <= filo.count+1 ;
+    151                                              			2'b11: if(filo.full)
+    152             1                        365     						filo.count <= filo.count-1 ;
+    153                                              					else if(filo.empty)
+    154             1                        654     						filo.count<= filo.count+1 ;
+    155                                              
+    156                                              
+    157                                              		endcase
+    158                                              	end
+    159                                              end
+    160                                              
+    161             1                       4508     assign filo.full = (filo.count == FIFO_DEPTH)? 1 : 0;
+    162             1                       4508     assign filo.empty = (filo.count == 0)? 1 : 0;
+    163             1                       4508     assign filo.almostfull = (filo.count == FIFO_DEPTH-1)? 1 : 0; 
+    164             1                       4508     assign filo.almostempty = (filo.count == 1)? 1 : 0;
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         12        12         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /\FIFO_TOP#dut  --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                       rd_ptr[2-0]           1           1      100.00 
+                                       wr_ptr[2-0]           1           1      100.00 
+
+Total Node Count     =          6 
+Toggled Node Count   =          6 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (12 of 12 bins)
+
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\FIFO_TOP#dut /C12                      FIFO   Verilog  SVA  FIFO.sv(84)     1247 Covered   
+/\FIFO_TOP#dut /C13                      FIFO   Verilog  SVA  FIFO.sv(85)     2031 Covered   
+/\FIFO_TOP#dut /C14                      FIFO   Verilog  SVA  FIFO.sv(86)     3483 Covered   
+/\FIFO_TOP#dut /C15                      FIFO   Verilog  SVA  FIFO.sv(87)     1260 Covered   
+/\FIFO_TOP#dut /C16                      FIFO   Verilog  SVA  FIFO.sv(88)     1260 Covered   
+/\FIFO_TOP#dut /C17                      FIFO   Verilog  SVA  FIFO.sv(89)      427 Covered   
+/\FIFO_TOP#dut /C18                      FIFO   Verilog  SVA  FIFO.sv(90)      427 Covered   
+/\FIFO_TOP#dut /C19                      FIFO   Verilog  SVA  FIFO.sv(91)     1769 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 8
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\FIFO_TOP#dut /P1   FIFO.sv(18)                        0          1
+/\FIFO_TOP#dut /P2   FIFO.sv(19)                        0          1
+/\FIFO_TOP#dut /P3   FIFO.sv(20)                        0          1
+/\FIFO_TOP#dut /P4   FIFO.sv(21)                        0          1
+/\FIFO_TOP#dut /P5   FIFO.sv(22)                        0          1
+/\FIFO_TOP#dut /P6   FIFO.sv(23)                        0          1
+/\FIFO_TOP#dut /P7   FIFO.sv(24)                        0          1
+/\FIFO_TOP#dut /P8   FIFO.sv(30)                        0          1
+/\FIFO_TOP#dut /P9   FIFO.sv(32)                        0          1
+/\FIFO_TOP#dut /P10  FIFO.sv(34)                        0          1
+/\FIFO_TOP#dut /P11  FIFO.sv(36)                        0          1
+/\FIFO_TOP#dut /P12  FIFO.sv(75)                        0          1
+/\FIFO_TOP#dut /P13  FIFO.sv(76)                        0          1
+/\FIFO_TOP#dut /P14  FIFO.sv(77)                        0          1
+/\FIFO_TOP#dut /P15  FIFO.sv(78)                        0          1
+/\FIFO_TOP#dut /P16  FIFO.sv(79)                        0          1
+/\FIFO_TOP#dut /P17  FIFO.sv(80)                        0          1
+/\FIFO_TOP#dut /P18  FIFO.sv(81)                        0          1
+/\FIFO_TOP#dut /P19  FIFO.sv(82)                        0          1
+
+Total Coverage By Instance (filtered view): 100.00%
+
